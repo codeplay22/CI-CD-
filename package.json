@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -b",
-    "dev": "npx prisma migrate dev && node ./dist/index.js"
+    "dev": "npx prisma migrate deploy && node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
