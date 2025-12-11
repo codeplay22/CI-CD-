@@ -34,7 +34,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            docker pull hellosircodeplay/ci-cd:${{ github.sha }}
-            docker stop ci-cd-container || true
-            docker rm ci-cd-container || true
-            docker run -d --name ci-cd-container -p 80:3000 -e DATABASE_URL=${{ secrets.DATABASE_URL }} hellosircodeplay/ci-cd:${{ github.sha }}
+            sudo docker pull hellosircodeplay/ci-cd:${{ github.sha }}
+            sudo docker stop ci-cd-container || true
+            sudo docker rm ci-cd-container || true
+            sudo docker run -d --name ci-cd-container -p 80:3000 -e DATABASE_URL=${{ secrets.DATABASE_URL }} hellosircodeplay/ci-cd:${{ github.sha }}
