@@ -18,7 +18,7 @@ app.get("/", async (req, res) => {
   });
 
   if (!user) {
-    res.json({ message: "User not found" });
+    res.json({ message: "User not foud" });
     return;
   }
 
