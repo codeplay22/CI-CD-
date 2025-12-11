@@ -24,4 +24,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: "codeplay/ci-cd:${{ github.sha }}"
+          tags: "hellosircodeplay/ci-cd:${{ github.sha }}"
